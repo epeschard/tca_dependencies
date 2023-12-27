@@ -9,6 +9,7 @@ let package = Package(
       name: "tca_dependencies",
       targets: [
         "NotificationCenterClient",
+        "PathMonitorClient",
         "UIApplicationClient",
       ]
     ),
@@ -21,12 +22,21 @@ let package = Package(
       name: "NotificationCenterClient"
     ),
     .target(
+      name: "PathMonitorClient"
+    ),
+    .target(
       name: "UIApplicationClient"
     ),
     .testTarget(
       name: "NotificationCenterClientTests",
       dependencies: [
-        "UIApplicationClient"
+        "NotificationCenterClient"
+      ]
+    ),
+    .testTarget(
+      name: "PathMonitorClientTests",
+      dependencies: [
+        "PathMonitorClient"
       ]
     ),
     .testTarget(
