@@ -8,6 +8,7 @@ let package = Package(
     .library(
       name: "tca_dependencies",
       targets: [
+        "NotificationCenterClient",
         "UIApplicationClient",
       ]
     ),
@@ -17,9 +18,15 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "UIApplicationClient",
+      name: "NotificationCenterClient"
+    ),
+    .target(
+      name: "UIApplicationClient"
+    ),
+    .testTarget(
+      name: "NotificationCenterClientTests",
       dependencies: [
-        
+        "UIApplicationClient"
       ]
     ),
     .testTarget(
