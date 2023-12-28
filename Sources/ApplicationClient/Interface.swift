@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
 
-public struct UIApplicationClient {
+public struct ApplicationClient {
   public var setIdleTimerDisabled: (Bool) -> Void
 }

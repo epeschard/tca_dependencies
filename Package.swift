@@ -14,12 +14,12 @@ let package = Package(
     .library(
       name: "tca_dependencies",
       targets: [
+        "ApplicationClient",
         "CameraClient",
         "HealthClient",
         "LocationClient",
         "NotificationCenterClient",
         "PathMonitorClient",
-        "UIApplicationClient",
       ]
     ),
   ],
@@ -27,6 +27,15 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.1.5"),
   ],
   targets: [
+    .target(
+      name: "ApplicationClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
+    ),
     .target(
       name: "CameraClient",
       dependencies: [
@@ -72,13 +81,10 @@ let package = Package(
         ),
       ]
     ),
-    .target(
-      name: "UIApplicationClient",
+    .testTarget(
+      name: "ApplicationClientTests",
       dependencies: [
-        .product(
-          name: "Dependencies",
-          package: "swift-dependencies"
-        ),
+        "ApplicationClient"
       ]
     ),
     .testTarget(
@@ -109,12 +115,6 @@ let package = Package(
       name: "ReachabilityClientTests",
       dependencies: [
         "ReachabilityClient"
-      ]
-    ),
-    .testTarget(
-      name: "UIApplicationClientTests",
-      dependencies: [
-        "UIApplicationClient"
       ]
     ),
   ]
