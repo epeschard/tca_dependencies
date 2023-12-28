@@ -3,8 +3,8 @@ import UIKit
 
 extension UIApplicationClient: DependencyKey {
   public static let liveValue = Self(
-    setIdleTimerDisabled: { isDisabled in
-      UIApplication.shared.isIdleTimerDisabled = isDisabled
+    setIdleTimerDisabled: {
+      UIApplication.shared.isIdleTimerDisabled = $0
     }
   )
 }

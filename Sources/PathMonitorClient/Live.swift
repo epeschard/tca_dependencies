@@ -3,9 +3,9 @@ import Dependencies
 import Network
 
 extension PathMonitorClient {
-//  public static let liveValue = Self(
-//    networkPathPublisher: <#T##AnyPublisher<NetworkPath, Never>#>
-//  )
+  public static let liveValue = Self.live(
+    queue: .main
+  )
 
   public static func live(queue: DispatchQueue) -> Self {
     let monitor = NWPathMonitor()
