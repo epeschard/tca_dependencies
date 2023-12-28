@@ -6,7 +6,7 @@ extension NotificationCenterClient: DependencyKey {
     let notificationCenter = NotificationCenter.default
 
     return Self(
-      addObserver: notificationCenter.addObserver(forName:object:queue:using:),
+      addObserver: notificationCenter.addObserver(_:selector:name:object:),
       postA: notificationCenter.post(_:),
       post: notificationCenter.post(name:object:userInfo:),
       removeObserver: notificationCenter.removeObserver(_:name:object:)
