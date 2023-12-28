@@ -2,7 +2,6 @@ import Combine
 import Dependencies
 import Network
 
-@available(iOS 13.0, *)
 extension PathMonitorClient {
 //  public static let liveValue = Self(
 //    networkPathPublisher: <#T##AnyPublisher<NetworkPath, Never>#>

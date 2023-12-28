@@ -1,7 +1,6 @@
 import Combine
 import CoreLocation
 
-@available(iOS 13.0, *)
 extension LocationClient {
   public static var authorizedWhenInUse: Self {
     let subject = PassthroughSubject<DelegateEvent, Never>()

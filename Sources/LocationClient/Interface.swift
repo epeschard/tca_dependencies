@@ -1,7 +1,6 @@
 import Combine
 import CoreLocation
 
-@available(iOS 13.0, *)
 public struct LocationClient {
   public var authorizationStatus: () -> CLAuthorizationStatus
   public var requestWhenInUseAuthorization: () -> Void

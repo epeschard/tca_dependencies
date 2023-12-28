@@ -2,7 +2,6 @@ import Combine
 import Foundation
 import Network
 
-@available(iOS 13.0, *)
 extension PathMonitorClient {
   public static let satisfied = Self(
     networkPathPublisher: Just(NetworkPath(status: .satisfied))

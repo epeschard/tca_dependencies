@@ -15,7 +15,6 @@ extension NetworkPath {
   }
 }
 
-@available(iOS 13.0, *)
 public struct PathMonitorClient {
   public var networkPathPublisher: AnyPublisher<NetworkPath, Never>
 
