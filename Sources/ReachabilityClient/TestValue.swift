@@ -1,7 +1,7 @@
 import Dependencies
 
 extension DependencyValues {
-  public var uiApplication: PathMonitorClient {
+  public var reachabilityClient: ReachabilityClient {
     get { self[PathMonitorClient.self] }
     set { self[PathMonitorClient.self] = newValue }
   }
@@ -9,7 +9,7 @@ extension DependencyValues {
 
 //MARK: -
 
-extension PathMonitorClient: TestDependencyKey {
+extension ReachabilityClient: TestDependencyKey {
   public static let testValue = Self(
     networkPathPublisher: unimplemented("\(Self.self).networkPathPublisher")
   )

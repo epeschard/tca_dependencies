@@ -2,7 +2,7 @@ import Combine
 import Foundation
 import Network
 
-extension PathMonitorClient {
+extension ReachabilityClient {
   public static let satisfied = Self(
     networkPathPublisher: Just(NetworkPath(status: .satisfied))
       .eraseToAnyPublisher()

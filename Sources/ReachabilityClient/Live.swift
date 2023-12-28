@@ -2,7 +2,7 @@ import Combine
 import Dependencies
 import Network
 
-extension PathMonitorClient {
+extension ReachabilityClient {
   public static let liveValue = Self.live(
     queue: .main
   )

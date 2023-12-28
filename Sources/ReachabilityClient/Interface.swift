@@ -15,7 +15,7 @@ extension NetworkPath {
   }
 }
 
-public struct PathMonitorClient {
+public struct ReachabilityClient {
   public var networkPathPublisher: AnyPublisher<NetworkPath, Never>
 
   public init(

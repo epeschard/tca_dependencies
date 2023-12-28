@@ -64,7 +64,7 @@ let package = Package(
       ]
     ),
     .target(
-      name: "PathMonitorClient",
+      name: "ReachabilityClient",
       dependencies: [
         .product(
           name: "Dependencies",
@@ -106,9 +106,9 @@ let package = Package(
       ]
     ),
     .testTarget(
-      name: "PathMonitorClientTests",
+      name: "ReachabilityClientTests",
       dependencies: [
-        "PathMonitorClient"
+        "ReachabilityClient"
       ]
     ),
     .testTarget(
