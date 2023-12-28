@@ -15,6 +15,7 @@ let package = Package(
       name: "tca_dependencies",
       targets: [
         "CameraClient",
+        "HealthClient",
         "LocationClient",
         "NotificationCenterClient",
         "PathMonitorClient",
@@ -28,6 +29,15 @@ let package = Package(
   targets: [
     .target(
       name: "CameraClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
+    ),
+    .target(
+      name: "HealthClient",
       dependencies: [
         .product(
           name: "Dependencies",
@@ -75,6 +85,12 @@ let package = Package(
       name: "CameraClientTests",
       dependencies: [
         "CameraClient"
+      ]
+    ),
+    .testTarget(
+      name: "HealthClientTests",
+      dependencies: [
+        "HealthClient"
       ]
     ),
     .testTarget(
