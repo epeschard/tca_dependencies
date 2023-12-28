@@ -18,8 +18,8 @@ let package = Package(
         "CameraClient",
         "HealthClient",
         "LocationClient",
-        "NotificationCenterClient",
-        "PathMonitorClient",
+        "NotificationClient",
+        "ReachabilityClient",
       ]
     ),
   ],
@@ -64,7 +64,7 @@ let package = Package(
       ]
     ),
     .target(
-      name: "NotificationCenterClient",
+      name: "NotificationClient",
       dependencies: [
         .product(
           name: "Dependencies",
@@ -106,9 +106,9 @@ let package = Package(
       ]
     ),
     .testTarget(
-      name: "NotificationCenterClientTests",
+      name: "NotificationClientTests",
       dependencies: [
-        "NotificationCenterClient"
+        "NotificationClient"
       ]
     ),
     .testTarget(
