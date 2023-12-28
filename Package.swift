@@ -14,6 +14,7 @@ let package = Package(
     .library(
       name: "tca_dependencies",
       targets: [
+        "CameraClient",
         "LocationClient",
         "NotificationCenterClient",
         "PathMonitorClient",
@@ -25,6 +26,15 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.1.5"),
   ],
   targets: [
+    .target(
+      name: "CameraClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
+    ),
     .target(
       name: "LocationClient",
       dependencies: [
@@ -59,6 +69,12 @@ let package = Package(
           name: "Dependencies",
           package: "swift-dependencies"
         ),
+      ]
+    ),
+    .testTarget(
+      name: "CameraClientTests",
+      dependencies: [
+        "CameraClient"
       ]
     ),
     .testTarget(
