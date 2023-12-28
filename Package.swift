@@ -19,13 +19,31 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "NotificationCenterClient"
+      name: "NotificationCenterClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
     ),
     .target(
-      name: "PathMonitorClient"
+      name: "PathMonitorClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
     ),
     .target(
-      name: "UIApplicationClient"
+      name: "UIApplicationClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
     ),
     .testTarget(
       name: "NotificationCenterClientTests",
