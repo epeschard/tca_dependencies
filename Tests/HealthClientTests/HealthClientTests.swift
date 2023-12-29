@@ -1,5 +1,5 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import HealthClient
 
 final class HealthClientTests: XCTestCase {
   func testExample() throws {

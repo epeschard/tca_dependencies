@@ -1,5 +1,5 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import LocationClient
 
 final class LocationClientTests: XCTestCase {
   func testExample() throws {

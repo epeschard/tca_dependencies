@@ -1,7 +1,7 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import ApplicationClient
 
-final class UIApplicationClientTest: XCTestCase {
+final class ApplicationClientTest: XCTestCase {
   func testExample() throws {
     // XCTest Documentation
     // https://developer.apple.com/documentation/xctest

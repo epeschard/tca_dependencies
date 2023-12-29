@@ -1,7 +1,7 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import NotificationClient
 
-final class NotificationCenterClientTest: XCTestCase {
+final class NotificationClientTest: XCTestCase {
   func testExample() throws {
     // XCTest Documentation
     // https://developer.apple.com/documentation/xctest

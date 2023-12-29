@@ -1,5 +1,5 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import CameraClient
 
 final class CameraClientTests: XCTestCase {
   func testExample() throws {

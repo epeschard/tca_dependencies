@@ -1,6 +1,6 @@
 import Foundation
 
-public struct NotificationCenterClient {
+public struct NotificationClient {
   var addObserver: (
     _ observer: Any,
     _ aSelector: Selector,

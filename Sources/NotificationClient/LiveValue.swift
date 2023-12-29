@@ -1,9 +1,10 @@
 import Dependencies
 import Foundation
 
-extension NotificationCenterClient: DependencyKey {
+extension NotificationClient: DependencyKey {
   public static var liveValue: Self {
     let notificationCenter = NotificationCenter.default
+    Noti
 
     return Self(
       addObserver: notificationCenter.addObserver(_:selector:name:object:),

@@ -1,5 +1,5 @@
 import XCTest
-@testable import UIApplicationClient
+@testable import ReachabilityClient
 
 final class ReachabilityClientTests: XCTestCase {
   func testExample() throws {

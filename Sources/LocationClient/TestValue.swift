@@ -2,7 +2,7 @@ import Dependencies
 import Foundation
 
 extension DependencyValues {
-  public var notificationCenterClient: LocationClient {
+  public var locationClient: LocationClient {
     get { self[LocationClient.self] }
     set { self[LocationClient.self] = newValue }
   }
