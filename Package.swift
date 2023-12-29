@@ -16,6 +16,7 @@ let package = Package(
       targets: [
         "ApplicationClient",
         "CameraClient",
+        "CareClient",
         "HealthClient",
         "LocationClient",
         "NotificationClient",
@@ -38,6 +39,15 @@ let package = Package(
     ),
     .target(
       name: "CameraClient",
+      dependencies: [
+        .product(
+          name: "Dependencies",
+          package: "swift-dependencies"
+        ),
+      ]
+    ),
+    .target(
+      name: "CareClient",
       dependencies: [
         .product(
           name: "Dependencies",
@@ -91,6 +101,12 @@ let package = Package(
       name: "CameraClientTests",
       dependencies: [
         "CameraClient"
+      ]
+    ),
+    .testTarget(
+      name: "CareClientTests",
+      dependencies: [
+        "CareClient"
       ]
     ),
     .testTarget(
